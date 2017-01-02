@@ -3,7 +3,7 @@
 }
 {\colortbl;\red255\green255\blue255;\red38\green38\blue38;\red234\green234\blue234;\red245\green245\blue245;
 }
-\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\margl1440\margr1440\vieww12060\viewh9300\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
 \f0\fs24 \cf0 \
@@ -133,4 +133,297 @@ Python\
 \
 quit() to get back to bash\
 \
+### Objects and Types\
+\
+Every object in Python has a type\
+Different types (classes) of objects\
+So when you create a class you create an object type\
+\
+Most common types:\
+booleans (True or False i.e. 2 == 3)\
+integers\
+floats\
+strings\
+\
+How do you record a number? Can use an integer (jellybeans) or float (fraction or pi)\
+\
+Real numbers that never terminate can eat up all your memory if you store them\
+\
+### Numbers\
+\
+Usually represented as ints or as floats\
+What can we do with these different types of python objects\
+Number of different operators we can use \
+\
+7 + 7\
+7 - 7\
+7 * 5 \
+14 / 5\
+14 // 5 - integer division (i.e. the quotient)\
+14 % 5 - the remainder \
+14 ** 5 - exponents \
+\
+Floats have to remember that there\'92s some rounding error, because floats are only approximations of real numbers.\
+\
+### Variables\
+\
+a = 7 # create an int object with an assignment statement\
+\
+# have created variable, a, that refers to an int object, 7\
+# important to see here that a is the variable and 7 is the integer object\
+# assignment does not actually copy the value \
+# a is assigned to refer to the 7 object \
+# important to understand the difference between the object and the variable\
+\
+# it takes an assignment operator to change the object the variable is pointing to\
+\
+a = 2\
+a = a - 1 \
+\
+or \
+\
+a -= 1 \
+\
+# the decrementing/incrementing operator or any other one\
+\
+b = 24\
+b //= 5 #means integer divide it by 5 \
+print(b)\
+\
+# so operator= means do something to the variable - change the object the variable is pointing to \
+\
+# dynamically typed language means that a variable could refer to one type of object at one point and to a different type of object at another point\
+\
+# so a refers to an integer but then can make it point to another type of object, like a string\
+# dynamic typing means freedom of variables to refer to plethora of object types\
+\
+# data is held in containers we call objects, that have different types\
+\
+# we need way to identify which object we want to access \
+\
+# variables are the names we use to access objects\
+\
+# so x = 5 - we create a new variable, x which becomes a name for the object, 5 \
+# so instead of typing in the memory address, we just use x \
+\
+# object name space is x \
+# we bind the name space to the object 5 \
+\
+# any object can have more than one names that are bound to it\
+\
+# but need one name to access to object or else it will be inaccessible and lost forever \
+\
+# all the objects have types attached to them (int, float, function, file)\
+\
+# but the name spaces can refer to any of the object types (can be dynamically typed)\
+\
+### Strings\
+\
+# Triple quotes force return in middle of the string\
+\
+>>> a = \'93\'94\'94To be or not to be \
+\'85 that is the question\'94\'94\'94\
+\
+>>> print(a)\
+To be or not to be\
+that is the question\
+\
+>>> a = \'93To be or not to be \\ \
+\'85 that is the question\'94 \
+\
+>>> print(a)\
+To be or not to be that is the question\
+\
+>>> x = \'93To be or not to be\\nThat is a question\'94\
+\
+>>> print(x)\
+To be or not to be\
+That is a question\
+\
+>>> x = \'93To be or not to be\\tThat is a question\'94\
+>>> print(x)\
+To be or not to be 	That is a question\
+\
+>>> x = \'93Shakespeare said: \\\'94To be or not to be, that is a question.\\\'94\'94\
+>>> print(x)\
+Shakespeare said: \'93To be or not to be, that is a question.\'94\
+\
+>>> x = \'93I just wanted to use a backslash \\\\ in this example.\'94\
+>>> print(x)\
+I just wanted to use a backslash \\ in this example. \
+\
+>>> a = \'93The  \'93\
+>>> b = \'93best class\'94\
+>>> a + b\
+\'91The best class\'92\
+\
+>>> s = \'93Absolute\'94\
+>>> print(s[0])\
+A\
+\
+# The position we\'92re putting into tracks is called a string index\
+# Can think of it as offset from the start of the beginning\
+\
+# If want more than one character out of string then use a slice\
+\
+>>> s[1:4]\
+\'91bso\'92 \
+\
+>>> s[1:-1]\
+\'91bsolut\'92 \
+\
+# if we want every second or third character can use step size\
+\
+>>> s[1:6:2]\
+\'91bou\'92 \
+\
+>>> s[1:]\
+\'91bsolute\'92\
+\
+>>> s[:-1]\
+\'91Absolut\'92 \
+\
+>>> s[::-1] # going to go from the end and step every one\
+\'91etulosbA\'92\
+\
+>>> s[:]\
+\'91Absolutely\'92\
+\
+>>> s[1:]\
+\'91bsolute\'92\
+\
+>>> s[:-1]\
+\'91Absolut\'92\
+\
+>>> s[1:4]\
+\'91bso\'92\
+\
+>>> s[1:6:2]\
+\'91bou\'92 \
+\
+>>> s[::-1]\
+\'91etulosbA\'92\
+\
+>>> s.upper()\
+\'91ABSOLUTE\'92\
+\
+>>> s.lower()\
+\'91absolute\'92\
+\
+>>> name = input(\'93Enter your name: \'93)\
+Enter your name: \
+\
+### Create a Module \
+\
+# save our commands as a program\
+\
+# give your text file an extension .py\
+# serves as an alert that the contents should be passed to a Python interpreter \
+\
+# use any text editor your like\
+\
+# go to terminal \
+\
+# cd into the folder\
+\
+# now type python3 example_program.py\
+\
+>>> python3 example_program.py\
+\
+### Control \
+\
+# Control as at the location in our program that is currently being executed\
+\
+x = int(input(\'93Enter an integer: \'93)) # enter an integer\
+if x % 2 == 0: # check if the remainder of x when divided by two is zero\
+	print(\'93Even\'94)\
+else:\
+	print(\'93Odd\'94)\
+\
+\
+x = int(input(\'93Enter an integer: \'93))\
+if x % 2 == 0:\
+	print(\'93Even\'94)\
+	if x > 10:\
+		print(\'93and bigger than 10\'94)\
+	else:\
+		print(\'93but smaller than 10\'94)\
+else:\
+	print(\'93Odd\'94)\
+\
+\
+x = int(input(\'93Enter your grade: \'93))\
+if x >= 90:\
+	print(\'93You got an A\'94)\
+	print(\'93Congratulations!\'94)\
+else:\
+	if x >= 80:\
+		print(\'93You got a B\'94)\
+	else: \
+		print(\'93Better luck next time!\'94)\
+\
+# can do elif clause instead \
+\
+x = int(input(\'93Enter your grade: \'93))\
+if x >= 90:\
+	print(\'93You got an A\'94)\
+	print(\'93Congratulations!\'94)\
+elif x >= 80:\
+	print(\'93You got a B\'94)\
+else: \
+	print(\'93Better luck next time!\'94)\
+\
+\
+### While Loops \
+\
+countdown = 5\
+while countdown > 0:\
+	print(countdown)\
+	countdown -= 1\
+print(\'93Blast off!\'94)\
+\
+x = int(input(\'93Enter an integer: \'93))\
+while x % 2 == 0:\
+	x = x / 2\
+print(\'93Your number with all the 2\'92s factored out is\'94, x)\
+\
+\
+row = int(input(\'93Enter an integer: \'93))\
+j = 0\
+while j <= row:\
+	print(j)\
+	j += 1\
+\
+\
+row = int(input(\'93Enter an integer: \'93))\
+j = 0\
+while j <= row:\
+	print(j, end=\'93 \'93)\
+	j += 1\
+\
+\
+row = int(input(\'93Enter an integer: \'93))\
+while row >= 0:\
+	j = 0\
+	while j <= row:\
+		print(j, end=\'93 \'93)\
+		j += 1\
+	print(\'93\'94)\
+	row -= 1\
+\
+\
+Run a program to see if an integer is a square number\
+\
+# start with a guess\
+# each time have the guess square it to see if we have the right answer\
+\
+x = int(input(\'93Enter an integer: \'93))\
+guess = 0\
+while guess ** 2 < x: # as long as square the guess and haven\'92t reached x yet, we want to keep looping\
+	print(guess,\'94squared is\'94, guess**2, \'93which is less than x.\'94, x = guess**2, \'93to go.\'94)\
+	guess += 1\
+if guess**2 == x:\
+	print(\'93The square root of\'94,x,\'94is\'94,guess)\
+else:\
+	print(x,\'94is not a perfect square.\'94)\
 }
